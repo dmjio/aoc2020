@@ -1,0 +1,28 @@
+name:                aoc2020
+version:             0.1.0.0
+synopsis:            Advent of Code 2020
+description:         Solutions for Advent of Code 2020
+bug-reports:         https://github.com/dmjio/aoc2020/issues
+license:             BSD3
+license-file:        LICENSE
+author:              David Johnson
+maintainer:          djohnson.m@gmail.com
+copyright:           David Johnson (c) 2020
+category:            Fun
+build-type:          Simple
+extra-source-files:  CHANGELOG.md, README.md
+cabal-version:       >=1.10
+
+executable aoc2020
+  main-is:
+    Main.hs
+  build-depends:
+    base < 5,
+    vector,
+    text,
+    bytestring,
+    containers,
+    unordered-containers,
+    split
+  default-language:
+    Haskell2010
