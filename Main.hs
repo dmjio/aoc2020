@@ -1,8 +1,8 @@
-{-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE BangPatterns #-}
-{-# LANGUAGE ViewPatterns #-}
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TypeApplications  #-}
+{-# LANGUAGE FlexibleContexts    #-}
+{-# LANGUAGE BangPatterns        #-}
+{-# LANGUAGE ViewPatterns        #-}
+{-# LANGUAGE OverloadedStrings   #-}
+{-# LANGUAGE TypeApplications    #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 module Main where
 
@@ -23,6 +23,7 @@ main = do
   day3
   day4
   day5
+  day6
 
 readInput :: String -> IO [Int]
 readInput name = fmap read . lines <$> readFile name
@@ -234,6 +235,7 @@ validEyr = ranged (2020,2030)
 
 day5 :: IO ()
 day5 = do
+  putStrLn "day 5"
   ls <- lines <$> readFile "day5.txt"
   let rowCols = fmap toRowCol ls
       seatIds = sort (fmap toSeatId rowCols)
@@ -278,4 +280,17 @@ toRowCol xs =
       else loCol
   in
     (exactRow,exactCol)
+
+day6 :: IO ()
+day6 = do
+  putStrLn "day 6"
+  day6pt1
+  day6pt2
+
+day6pt1 :: IO ()
+day6pt1 = do
+  ls <- lines <$> readFile "day6.txt"
+  let groups = splitOn [""] ls
+  print $ sum (length . nub . concat <$> groups)
+  print $ sum (length . foldl1' intersect <$> groups)
 
