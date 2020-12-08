@@ -10,6 +10,7 @@ let
       cp -v ${drv.src}/5/day5.txt $out/bin
       cp -v ${drv.src}/6/day6.txt $out/bin
       cp -v ${drv.src}/7/day7.txt $out/bin
+      cp -v ${drv.src}/8/day8.txt $out/bin
     '';
   });
   runAoc = pkgs.writeScriptBin "run" ''
@@ -21,6 +22,7 @@ let
     ${aoc2020}/bin/day5
     ${aoc2020}/bin/day6
     ${aoc2020}/bin/day7
+    ${aoc2020}/bin/day8
   '';
 in
 {
