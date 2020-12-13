@@ -1,3 +1,6 @@
 TAGS
 /dist-*/
 /result*
+*~
+*.o
+*.hi
