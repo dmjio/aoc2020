@@ -29,6 +29,7 @@ extra-source-files:
   , day12/day12.txt
   , day13/day13.txt
   , day14/day14.txt
+  , day15/day15.txt
 
 executable day1
   main-is:
@@ -244,6 +245,22 @@ executable day14
     Main.hs
   hs-source-dirs:
     14
+  build-depends:
+    base < 5,
+    vector,
+    text,
+    bytestring,
+    containers,
+    unordered-containers,
+    split
+  default-language:
+    Haskell2010
+
+executable day15
+  main-is:
+    Main.hs
+  hs-source-dirs:
+    15
   build-depends:
     base < 5,
     vector,
