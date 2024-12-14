@@ -6,7 +6,7 @@ bug-reports:         https://github.com/dmjio/aoc2020/issues
 license:             BSD3
 license-file:        LICENSE
 author:              David Johnson
-maintainer:          djohnson.m@gmail.com
+maintainer:          code@dmj.io
 copyright:           David Johnson (c) 2020
 category:            Fun
 build-type:          Simple
